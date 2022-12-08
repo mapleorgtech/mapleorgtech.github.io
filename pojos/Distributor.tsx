@@ -8,7 +8,7 @@ const distributorSchema = new Schema({
     user: User, 
     regular: Boolean, 
     customers: [Customer], 
-    storageAssigned: [Storage]
+    storageAssigned: [Storage] 
 }, { timestamps: true }); 
 
 const Distributor = mongoose.model('Distributor', distributorSchema)

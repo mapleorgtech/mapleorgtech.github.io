@@ -3,17 +3,15 @@ import Head from 'next/head';
 import styled from 'styled-components'; 
 import Loginform from '../components/login/login-form';
 import dynamic from 'next/dynamic';
-import Location from '../pojos/Location'
-// const Location = require('../pojos/Location') 
+import * as db from '../lib/mongodb'
+const Location = require('../pojos/Location') 
 
 const BgImage = dynamic(() => import('../components/global/main-bg'), {
     ssr: false
 })
 
-
-
 function handleClick () { 
-    const location = new Location({ 
+    const location = Location.create({ 
         latitude: "asdjas", 
         longitude: "asdkashd",
         state: "asdas",
@@ -21,7 +19,10 @@ function handleClick () {
         district: "adasd", 
         block: "asdasd"
     })
-    location.save()
+    
+
+    
+    console.log(location)
 }
 const Home: NextPage = () => {
   return (

@@ -1,12 +1,31 @@
-import mongoose from 'mongoose'
+const mongoose = require('mongoose')
 
 const LocationSchema = new mongoose.Schema({
-    latitude: String, 
-    longitude: String, 
-    state: String, 
-    territory: String, 
-    district: String, 
-    block: String 
-}); 
+    latitude: {
+        type: String, 
+        default: ""
+    }, 
+    longitude: {
+        type: String, 
+        default: ""
+    },
+    state: {
+        type: String, 
+        default: ""
+    },
+    terittory: {
+        type: String, 
+        default: ""
+    },
+    district: {
+        type: String, 
+        default: ""
+    }, 
+    block: {
+        type: String, 
+        default: ""
+    }, 
+},); 
 
-export default mongoose.model('Location', LocationSchema)
+module.exports = mongoose.model('Location', LocationSchema)
+    
