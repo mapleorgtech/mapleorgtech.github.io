@@ -26,20 +26,18 @@ const NavBar = () => {
 }
 
 const Logo = styled(Image)`
-    width: auto; 
-    height: auto;
+    position: float; 
     left: 0px; 
-    top: 0px;
-    float: left; 
-    position: absolute; 
-    z-index: 1; 
+    top: 0px; 
+    width: auto; 
+    height: 120px;
 `
 
 const Container = styled.div`
-    left: 0; 
-    position: relative; 
+    left: 0;  
     width: auto; 
-    height: 10vh; 
+    height: auto; 
+    max-height: 90px;
 `
 
 const Title = styled.p`
@@ -49,7 +47,6 @@ const Title = styled.p`
     font-weight: 900;
     font-size: 32px;
     margin-right: 20px;
-    line-height: 38px;
 `
 
 const Header = styled.div`
@@ -58,9 +55,9 @@ const Header = styled.div`
     justify-content: space-between; 
     box-sizing: border-box;
     position: absolute;
-    width: 99%;
+    width: 98%;
     right: 0px; 
-    height: 8vh;
+    height: auto;
     align-items: center;
     border-top-left-radius: 80px 80px;
     border-bottom-left-radius: 80px 80px;
