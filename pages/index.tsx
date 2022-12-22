@@ -3,15 +3,16 @@ import Head from 'next/head';
 import styled from 'styled-components'; 
 import Loginform from '../components/login/login-form';
 import dynamic from 'next/dynamic';
-const Location = require('../pojos/Location') 
+import Navbar from '../components/global/header'
 
 const BgImage = dynamic(() => import('../components/global/main-bg'), {
-    ssr: false
+    ssr: true
 })
 
 const Home: NextPage = () => {
   return (
     <>
+        <Navbar/>
         <Wrapper>
             <Head>
                 <title>Login Page</title>
