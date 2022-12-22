@@ -3,27 +3,12 @@ import Head from 'next/head';
 import styled from 'styled-components'; 
 import Loginform from '../components/login/login-form';
 import dynamic from 'next/dynamic';
-import * as db from '../lib/mongodb'
 const Location = require('../pojos/Location') 
 
 const BgImage = dynamic(() => import('../components/global/main-bg'), {
     ssr: false
 })
 
-function handleClick () { 
-    const location = Location.create({ 
-        latitude: "asdjas", 
-        longitude: "asdkashd",
-        state: "asdas",
-        terittory: "adasd",
-        district: "adasd", 
-        block: "asdasd"
-    })
-    
-
-    
-    console.log(location)
-}
 const Home: NextPage = () => {
   return (
     <>
@@ -33,7 +18,6 @@ const Home: NextPage = () => {
                 <meta name='viewport' content='width=device-width, initial-scale=1' />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <button onClick={handleClick}>click to save</button>
             <main className='vh-100 d-flex justify-content-center align-items-center'>
                 <Loginform/>
             </main>

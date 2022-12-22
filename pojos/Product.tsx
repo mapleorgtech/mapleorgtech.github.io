@@ -26,6 +26,7 @@ const productSchema = new Schema({
         type: String, 
         required: true
     }
+    // add raw materials list
 }); 
 
 const Product = mongoose.model('Product', productSchema)
