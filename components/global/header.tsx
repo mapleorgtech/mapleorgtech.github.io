@@ -5,23 +5,21 @@ import logo from '../../public/assets/images/logo.png'
 
 const NavBar = () => {
     return(
-        <>
-            <Header>
-                <Link href={"/"} legacyBehavior>
-                    <a>
-                        <Container>                        
-                            <Logo
-                                width={1000}
-                                height={1000}
-                                src={logo}
-                                alt='Logo'
-                            />
-                        </Container>
-                    </a>
-                </Link>
-                <Title>Dashboard</Title>
-            </Header>
-        </>
+        <Header>
+            <Link href={"/"} legacyBehavior>
+                <a>
+                    <Container>                        
+                        <Logo
+                            width={1000}
+                            height={1000}
+                            src={logo}
+                            alt='Logo'
+                        />
+                    </Container>
+                </a>
+            </Link>
+            <Title>Dashboard</Title>
+        </Header> 
     )
 }
 
@@ -30,14 +28,14 @@ const Logo = styled(Image)`
     left: 0px; 
     top: 0px; 
     width: auto; 
-    height: 120px;
+    height: 110px;
 `
 
 const Container = styled.div`
     left: 0;  
     width: auto; 
     height: auto; 
-    max-height: 90px;
+    max-height: 80px;
 `
 
 const Title = styled.p`
@@ -53,7 +51,6 @@ const Header = styled.div`
     display: flex; 
     flex-direction: row; 
     justify-content: space-between; 
-    box-sizing: border-box;
     position: absolute;
     width: 98%;
     right: 0px; 
