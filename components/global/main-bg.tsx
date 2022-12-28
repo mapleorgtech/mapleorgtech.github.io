@@ -4,7 +4,7 @@ import bgImage from '../../public/assets/images/main_bg.png'
 import styled from 'styled-components'
 
 const Box = styled.div`
-    position: absolute: 
+    position: absolute; 
     z-index: 0; 
     top: 0; 
 `; 
