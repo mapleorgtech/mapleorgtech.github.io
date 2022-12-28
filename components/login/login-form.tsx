@@ -20,6 +20,7 @@ export default function LoginForm() {
 					values: Values,
 					{ setSubmitting }: FormikHelpers<Values>
 				) => {
+                    console.log()
 					/* TODO: add empty object check util function*/
 				}}
 			>
