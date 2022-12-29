@@ -7,9 +7,9 @@ jobs:
       - name: whatsapp-notify
         id: whatsapp-notify
         env:
-          account_sid: ${{ process.env.NEXT_PUBLIC_account_sid }}
-          auth_token: ${{ process.env.NEXT_PUBLIC_auth_token }}
-          to_whatsapp_no: ${{ process.env.NEXT_PUBLIC_to_whatsapp_no }}
+          account_sid: ${{ AC27b3abb7421206e10413d9f8056a3411 }}
+          auth_token: ${{ 3bd9c32e4693bee7ad99965f0c8f98cd }}
+          to_whatsapp_no: ${{ +917898164077 }}
 
 
         uses: ishween/whatsapp-push-notify-action@master
