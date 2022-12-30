@@ -14,7 +14,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<main className={sen.className}>
 			<Navbar />
-			<Component {...pageProps} />;
+			<Component {...pageProps} />
 			<BgImage />
 		</main>
 	);
