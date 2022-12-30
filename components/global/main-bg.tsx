@@ -4,9 +4,11 @@ import bgImage from '../../public/assets/images/main_bg.png'
 import styled from 'styled-components'
 
 const Box = styled.div`
-    position: absolute; 
-    z-index: 0; 
+    position: fixed; 
+    z-index: -1; 
     top: 0; 
+    width: 100%;
+    height: 100%;
 `; 
 
 function getWindowDimensions () {

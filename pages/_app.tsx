@@ -1,7 +1,13 @@
-import 'bootstrap/dist/css/bootstrap.css'
-import type { AppProps } from 'next/app'
-import '../styles/global.css'
+import type { AppProps } from "next/app";
+import "../styles/global.css";
+import { Sen } from "@next/font/google";
+
+const sen = Sen({ weight: "400", subsets: ["latin"] });
 
 export default function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+	return(
+        <main className={sen.className}>
+            <Component {...pageProps} />;
+        </main>
+    ) 
 }

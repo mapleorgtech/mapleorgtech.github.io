@@ -1,5 +1,4 @@
 import { Formik, Field, Form, FormikHelpers } from "formik";
-import styles from "./login-form.module.css";
 import { isEmpty } from "../../lib/utils";
 import styled from "styled-components";
 
@@ -20,14 +19,14 @@ export default function LoginForm() {
 					values: Values,
 					{ setSubmitting }: FormikHelpers<Values>
 				) => {
-                    console.log("test 5")
+					console.log("test 5");
 					/* TODO: add empty object check util function*/
 				}}
 			>
 				<Form>
 					<Input id='username' name='username' placeholder='Username' />
 					<Input id='password' name='password' placeholder='Password' />
-					<Submit type='submit'>Log in</Submit>
+					<Submit type='submit'>LOG IN</Submit>
 				</Form>
 			</Formik>
 		</LoginBox>
@@ -35,14 +34,13 @@ export default function LoginForm() {
 }
 
 const LoginBox = styled.div`
-	display: flex;
-	position: absolute;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	background: rgba(255, 156, 64, 0.75);
 	border-radius: 15px;
-	padding: 40px 80px;
+	padding: 40px;
+	padding-bottom: 0px;
 `;
 
 const Input = styled(Field)`
@@ -63,14 +61,18 @@ const Input = styled(Field)`
 `;
 
 const Submit = styled.button`
-	position: absolute;
+	display: block;
+	width: 70%;
+	padding: 10px;
 	justify-content: center;
-	transform: translate(50%, 50%);
+    border-color: #62696d;
+	transform: translateY(20%);
 	align-items: center;
-	padding: 8px 10px;
+	font-weight: 800;
+	font-size: 16px;
+	margin: 0 auto;
 	background: #62696d;
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 11px;
 	color: white;
-    width: 40%;
 `;
