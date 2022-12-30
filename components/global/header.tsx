@@ -13,7 +13,7 @@ const NavBar = () => {
 					</Container>
 				</a>
 			</Link>
-			<Title>Login</Title>
+			<Title></Title>
 		</Header>
 	);
 };
@@ -40,6 +40,7 @@ const Title = styled.p`
 	font-weight: 900;
 	font-size: 32px;
 	margin-right: 20px;
+    text-transform: uppercase;
 `;
 
 const Header = styled.div`

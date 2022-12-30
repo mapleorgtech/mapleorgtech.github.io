@@ -1,46 +1,68 @@
-import { Formik, Field, Form, FormikHelpers } from "formik";
-import { isEmpty } from "../../lib/utils";
+import Link from "next/link";
 import styled from "styled-components";
+import { Formik, Field, Form, FormikHelpers } from "formik";
 
 interface Values {
+	name: string;
 	email: string;
+	role: string;
 	password: string;
 }
 
-export default function LoginForm() {
+export default function SignupForm() {
 	return (
-		<LoginBox>
+		<SignupBox>
 			<Formik
 				initialValues={{
+					name: "",
 					email: "",
+					role: "",
 					password: ""
 				}}
 				onSubmit={(
 					values: Values,
 					{ setSubmitting }: FormikHelpers<Values>
-				) => {
-					console.log("test 5");
-					/* TODO: add empty object check util function*/
-				}}
+				) => {}}
 			>
 				<Form>
+					<Input id='name' name='name' placeholder='Full Name' />
 					<Input id='email' name='email' placeholder='Email' />
 					<Input id='password' name='password' placeholder='Password' type="password"/>
-					<Submit type='submit'>LOG IN</Submit>
+					<Input id='rePassword' name='rePassword' placeholder='Password' type="password"/>
+					<SelectRole>
+						<option value='' label='Role' />
+						<option value='Distributor' label='Distributor' />
+						<option value='Sales & Marketing' label='Sales & Marketing' />
+						<option value='Production' label='Production' />
+					</SelectRole>
+					<Submit type='submit'>Request Account</Submit>
 				</Form>
 			</Formik>
-		</LoginBox>
+		</SignupBox>
 	);
 }
 
-const LoginBox = styled.div`
+const SelectRole = styled.select`
+	display: block;
+	width: 100%;
+	min-height: fit-content;
+	font-family: "Roboto";
+	font-style: normal;
+	padding: 2px 10px;
+	margin-bottom: 20px;
+	font-size: 24px;
+	line-height: 28px;
+	border: 1px;
+	box-shadow: inset 2px 2px 4px 1px rgba(0, 0, 0, 0.3);
+`;
+
+const SignupBox = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	background: rgba(255, 156, 64, 0.75);
 	border-radius: 15px;
 	padding: 40px;
-	padding-bottom: 0px;
 `;
 
 const Input = styled(Field)`
@@ -67,7 +89,6 @@ const Submit = styled.button`
 	padding: 10px;
 	justify-content: center;
 	border-color: #62696d;
-	transform: translateY(20%);
 	align-items: center;
 	font-weight: 800;
 	font-size: 16px;

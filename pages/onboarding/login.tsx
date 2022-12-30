@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import LoginForm from '../../components/login/login-form'
+import { useRouter } from 'next/router'
 import Link from 'next/link'
 
 function handleSignUp() {
@@ -7,14 +8,29 @@ function handleSignUp() {
 }
 
 export default function Login() {
+    const router = useRouter()
     return(
-        <>
-            <LoginForm/>
-            <Link href={'/'} style={{ textDecoration: 'none' }}><ForgotPass>Forgot Password?</ForgotPass></Link>
-            <SignUp onClick={handleSignUp}>SIGN UP</SignUp>
-        </>
+        <Wrapper>
+            <main>
+                <LoginForm/>
+                <Link href={'/'} style={{ textDecoration: 'none' }}><ForgotPass>Forgot Password?</ForgotPass></Link>
+                <Link href={'/onboarding/signup'} style={{ textDecoration: 'none' }} as="/signup" shallow>
+                    <SignUp onClick={handleSignUp}>SIGN UP</SignUp>
+                </Link>
+            </main>
+        </Wrapper>
     )
 }
+
+const Wrapper = styled.div`
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+    padding-top: 80px;
+	align-items: center;
+	position: fixed;
+	display: flex;
+`;
 
 const SignUp = styled.button`
     display: flex;
