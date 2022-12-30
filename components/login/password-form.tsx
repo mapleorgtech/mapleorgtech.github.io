@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Formik, Field, Form, FormikHelpers } from "formik";
 
 interface Values {
-    name: string;
+	name: string;
 	email: string;
 	role: string;
 }
@@ -13,9 +13,9 @@ export default function PasswordForm() {
 		<PasswordBox>
 			<Formik
 				initialValues={{
-                    name: "",
+					name: "",
 					email: "",
-					role: "",
+					role: ""
 				}}
 				onSubmit={(
 					values: Values,
@@ -23,7 +23,7 @@ export default function PasswordForm() {
 				) => {}}
 			>
 				<Form>
-                    <Input id='name' name='name' placeholder='Full Name' />
+					<Input id='name' name='name' placeholder='Full Name' />
 					<Input id='email' name='email' placeholder='Email' />
 					<SelectRole>
 						<option value='' label='Role' />
@@ -31,7 +31,9 @@ export default function PasswordForm() {
 						<option value='Sales & Marketing' label='Sales & Marketing' />
 						<option value='Production' label='Production' />
 					</SelectRole>
-					<Link href={'/'}><Submit type='submit'>Request Password</Submit></Link>
+					<Link href={"/"} style={{ textDecoration: "none" }}>
+						<Submit type='submit'>Request Password</Submit>
+					</Link>
 				</Form>
 			</Formik>
 		</PasswordBox>

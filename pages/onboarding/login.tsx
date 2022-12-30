@@ -11,11 +11,11 @@ export default function Login() {
 		<Wrapper>
 			<main>
 				<LoginForm />
-				<Link 
-                    href={"/onboarding/password"}
-                    style={{ textDecoration: "none" }}
-                    as={"/reset-password"}
-                >
+				<Link
+					href={"/onboarding/password"}
+					style={{ textDecoration: "none" }}
+					as={"/reset-password"}
+				>
 					<ForgotPass>Forgot Password?</ForgotPass>
 				</Link>
 				<Link

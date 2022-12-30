@@ -27,15 +27,29 @@ export default function SignupForm() {
 				<Form>
 					<Input id='name' name='name' placeholder='Full Name' />
 					<Input id='email' name='email' placeholder='Email' />
-					<Input id='password' name='password' placeholder='Password' type="password"/>
-					<Input id='rePassword' name='rePassword' placeholder='Password' type="password"/>
+					<Input
+						id='password'
+						name='password'
+						placeholder='Password'
+						type='password'
+					/>
+					<Input
+						id='rePassword'
+						name='rePassword'
+						placeholder='Password'
+						type='password'
+					/>
 					<SelectRole>
 						<option value='' label='Role' />
 						<option value='Distributor' label='Distributor' />
 						<option value='Sales & Marketing' label='Sales & Marketing' />
 						<option value='Production' label='Production' />
 					</SelectRole>
-					<Link href={'/'}><Submit type='submit'>Request Account</Submit></Link>
+					<Link href={"/"}>
+						<Submit type='submit' style={{ textDecoration: "none" }}>
+							Request Account
+						</Submit>
+					</Link>
 				</Form>
 			</Formik>
 		</SignupBox>

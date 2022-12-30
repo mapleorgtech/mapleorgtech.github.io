@@ -66,23 +66,23 @@ const Card = styled.div`
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-    position: relative;
+	position: relative;
 	align-items: center;
 	padding: 10px 40px;
 	background: #404040;
 	border-radius: 5.5px;
 	margin-top: 20px;
-    cursor: pointer;
-    &:hover { 
-        background:#E76F51;
-    }
+	cursor: pointer;
+	&:hover {
+		background: #e76f51;
+	}
 `;
 
 const Logo = styled(Image)`
-    position: absolute;
+	position: absolute;
 	left: 0px;
-    transform: translateX(-50%);
-    fill: #ffa654;
+	transform: translateX(-50%);
+	fill: #ffa654;
 `;
 
 const Title = styled.p`
@@ -92,14 +92,14 @@ const Title = styled.p`
 	font-size: 20px;
 	line-height: 24px;
 	text-transform: uppercase;
-    &:hover { 
-        color: white;
-    }
+	&:hover {
+		color: white;
+	}
 `;
 
 const Wrapper = styled.div`
 	display: flex;
-    width: min-content;
+	width: min-content;
 	position: absolute;
 	flex-direction: column;
 	background: #264653;

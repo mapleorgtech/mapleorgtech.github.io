@@ -26,8 +26,19 @@ export default function LoginForm() {
 			>
 				<Form>
 					<Input id='email' name='email' placeholder='Email' />
-					<Input id='password' name='password' placeholder='Password' type="password"/>
-					<Link href={'/distributor/dashboard'} as='/dashboard'><Submit type='submit'>LOG IN</Submit></Link>
+					<Input
+						id='password'
+						name='password'
+						placeholder='Password'
+						type='password'
+					/>
+					<Link
+						href={"/distributor/dashboard"}
+						as='/dashboard'
+						style={{ textDecoration: "none" }}
+					>
+						<Submit type='submit'>LOG IN</Submit>
+					</Link>
 				</Form>
 			</Formik>
 		</LoginBox>
