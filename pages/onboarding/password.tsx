@@ -1,10 +1,10 @@
 import Link from "next/link";
 import styled from "styled-components";
-import SignupForm from "../../components/login/signup-form";
 import Image from "next/image";
 import back from "../../public/assets/images/back_arrow.svg";
+import PasswordForm from "../../components/login/password-form";
 
-export default function Signup() {
+export default function ResetPassword() {
 	return (
 		<Wrapper>
 			<main>
@@ -14,7 +14,7 @@ export default function Signup() {
 						<LogInText>login</LogInText>
 					</BackLogin>
 				</Link>
-				<SignupForm />
+				<PasswordForm />
 			</main>
 		</Wrapper>
 	);
@@ -34,7 +34,6 @@ const LogInText = styled.p`
 	color: black;
 `;
 
-// TODO: figure out how to reduce this boilerplate
 const Wrapper = styled.div`
 	width: 100%;
 	height: 100%;

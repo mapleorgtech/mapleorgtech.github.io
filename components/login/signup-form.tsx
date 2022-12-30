@@ -35,7 +35,7 @@ export default function SignupForm() {
 						<option value='Sales & Marketing' label='Sales & Marketing' />
 						<option value='Production' label='Production' />
 					</SelectRole>
-					<Submit type='submit'>Request Account</Submit>
+					<Link href={'/'}><Submit type='submit'>Request Account</Submit></Link>
 				</Form>
 			</Formik>
 		</SignupBox>
