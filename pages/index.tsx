@@ -3,7 +3,6 @@ import Head from "next/head";
 import styled from "styled-components";
 import Login from "./onboarding/login";
 import Link from "next/link";
-import Signup from "./onboarding/signup";
 
 const Home: NextPage = () => {
 	return (
